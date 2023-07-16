@@ -89,7 +89,6 @@ const Cart = (props) => {
     </button>
     {hasItems && <button onClick={orderFoodHandler} className={classes.button}>{isLoading? 'Loading...':'Confirm'}</button>}
   </div>;
-  // console.log(postError);
   return (
     <Modal onClose={props.onClose}>
       <div className={classes.modal}>
@@ -100,7 +99,6 @@ const Cart = (props) => {
         </div>
         {isOrdered && <CartForm postError={postError} isLoading={isLoading} onOrder={finalOrderHandler} onCancel={props.onClose}/>}
         {!isOrdered && orderJSX}
-
       </div>
     </Modal>
   );
